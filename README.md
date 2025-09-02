@@ -32,7 +32,7 @@ The hybrid approach balances **compression ratio, pixel-level fidelity, and perc
 
 
 ## Method Overview
-<img src="imgs/Model Diagram (1).png">
+<img src="imgs/Model Diagram.svg">
 
 The model integrates:
 - **Encoder–Decoder CAE** for compact latent representations.  
