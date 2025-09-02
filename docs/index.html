@@ -23,7 +23,7 @@
     </div>
 
     <div class="box banner-box">
-      <img src="Images/banner.svg" alt="Compression and reconstruction overview" />
+      <img src="images/Banner.svg" alt="Compression and reconstruction overview" />
       <div class="caption">Visual overview of the compression and reconstruction output.</div>
 
       <section class="overview">
@@ -45,7 +45,7 @@
 
     <h2>Architecture Overview</h2>
     <div class="box">
-      <img src="Images/Model Diagram.svg" alt="Model Diagram" />
+      <img src="images/Model Diagram.svg" alt="Model Diagram" />
       <div class="caption">Diagram of the complete model architecture.</div>
       <p> 
         The model is a CAE trained within an adversarial framework using a PatchGAN discriminator. 
@@ -72,7 +72,7 @@
 
     <h2>Results</h2>
 <div class="box">
-    <img src="Images/Final Output Results.svg" alt="Final reconstructions" />
+    <img src="images/Final Output Results.svg" alt="Final reconstructions" />
     <div class="caption">Final Reconstruction Results of Model.</div>
     <p>Qualitative results of full model reconstructions. Qualitative output of the full model. Each image shows the result of compression 
       and reconstruction through the model architecture. The reconstructions retain 
@@ -84,14 +84,14 @@
 <h2>Metrics</h2>
   <div class="charts">
     <div>
-      <img src="Images/PSNR_CHART.png" alt="PSNR chart" width ="400">
+      <img src="images/PSNR_CHART.png" alt="PSNR chart" width ="400">
       <div class="caption">
         PSNR tracked during training of the three models. Shows gradual improvement in 
         pixel-level similarity between input and reconstructed images over training steps.
       </div>
     </div>
     <div>
-      <img src="Images/SSIM_CHART.png" alt="SSIM chart" width ="400">
+      <img src="images/SSIM_CHART.png" alt="SSIM chart" width ="400">
       <div class="caption">
         SSIM over training steps for the three models. Reflects improved perceptual 
         similarity between the input and reconstruction.
@@ -109,7 +109,7 @@
       <li>CAE + Residual Blocks + PatchGAN + Perceptual Loss [GCRB]</li>
     </ul>
 </div>
-  <img class="palette_img" src="Images/Palette.svg" alt="Ablation reconstruction comparison">
+  <img class="palette_img" src="images/Palette.svg" alt="Ablation reconstruction comparison">
   <div class="caption">Ablation study presenting reconstruction results for three configurations: CAE, CRB, and GCRB.</div>
   <p>
     The CAE model produces blurry reconstructions with noticeable checkerboard artifacts, especially in areas with rich textures. The CRB configuration enhances edge sharpness, improves pixel-level accuracy, and reduces artifacting. However, it still falls short in capturing fine details and textures, such as eye color, whiskers, and variations in fur. The GCRB model demonstrates further improvements, offering better preservation of detail and a more realistic overall appearance.
