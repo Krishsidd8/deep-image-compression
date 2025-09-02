@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optimal Image Compression</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" />
+  <script defer src="script.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <button class="toggle" onclick="toggleMode()">🌙 Dark Mode</button>
+
+  <div class="container">
+    <h1 class="title">Optimal Image Compression through Deep Learning Architecture</h1>
+    <p class="author">Krish Siddhiwala • May 2025</p>
+    
+    <div class="meta-links">
+      <a href="https://github.com/Krishsidd8/deep-image-compression" target="_blank">[GitHub]</a>
+      <a href="Images/2_Optimal_Image_Compression_through_Integration_of_Deep_Learning_Architectures (1).pdf" target="_blank">[Paper]</a>
+    </div>
+
+    <div class="box banner-box">
+      <img src="Images/banner.svg" alt="Compression and reconstruction overview" />
+      <div class="caption">Visual overview of the compression and reconstruction output.</div>
+
+      <section class="overview">
+        <h2>Overview</h2>
+        <p>
+          This research presents a lightweight deep learning model for image compression, designed 
+          specifically for deployment in resource-constrained environments like mobile devices, 
+          drones, and IoT systems. The proposed architecture integrates Convolutional Autoencoders
+           (CAEs), Residual Blocks (ResBlocks), and Generative Adversarial Networks (GANs) to 
+           balance compression efficiency and perceptual quality. The model's components are 
+           evaluated through an ablation study and benchmarked using standard metrics such as
+            Compression Ratio (CR), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity 
+            Index Measure (SSIM). Overall, the results show that this compact model achieves 
+            effective compression while maintaining visual fidelity, making it suitable for 
+            edge-based real-world applications.
+        </p>
+      </section>
+    </div>
+
+    <h2>Architecture Overview</h2>
+    <div class="box">
+      <img src="Images/Model Diagram.svg" alt="Model Diagram" />
+      <div class="caption">Diagram of the complete model architecture.</div>
+      <p> 
+        The model is a CAE trained within an adversarial framework using a PatchGAN discriminator. 
+        The complete system consists of three main components: an encoder (Enc.), a decoder (Dec.), 
+        and a discriminator (Disc). The encoder and decoder together form the generator, which aims 
+        to form the reconstructed image. The discriminator promotes perceptual quality by 
+        distinguishing real from fake reconstructions at the patch level. The diagram highlights how 
+        input images are compressed, reconstructed, and evaluated across stages using adversarial 
+        and perceptual feedback. This architecture allows the model to maintain spatial detail and 
+        perceptual quality in reconstructions while remaining efficient and deployable for edge 
+        applications.
+      </p>
+    </div>
+
+    <h2>Loss Functions</h2>
+      <div class="math-caption">Training is driven by a hybrid loss function combining:</div>
+      <div class="math-block">
+        \( \mathcal{L}_G = \mathcal{L}_{L1} + \lambda_{LPIPS} \cdot \mathcal{L}_{LPIPS} + \lambda_{GAN} \cdot w \cdot \mathcal{L}_{GAN} \)
+      </div>
+      <div class="math-caption">The discriminator is trained using hinge loss for greater stability:</div>
+      <div class="math-block">
+        \( L_D = \mathbb{E}[\max(0, 1 - D(x))] + \mathbb{E}[\max(0, 1 + D(\hat{x}))] \)
+      </div>
+
+    <h2>Results</h2>
+<div class="box">
+    <img src="Images/Final Output Results.svg" alt="Final reconstructions" />
+    <div class="caption">Final Reconstruction Results of Model.</div>
+    <p>Qualitative results of full model reconstructions. Qualitative output of the full model. Each image shows the result of compression 
+      and reconstruction through the model architecture. The reconstructions retain 
+      global structure and local detail, demonstrating effective balance between compression
+      and fidelity.</p>
+    
+</div>
+
+<h2>Metrics</h2>
+  <div class="charts">
+    <div>
+      <img src="Images/PSNR_CHART.png" alt="PSNR chart" width ="400">
+      <div class="caption">
+        PSNR tracked during training of the three models. Shows gradual improvement in 
+        pixel-level similarity between input and reconstructed images over training steps.
+      </div>
+    </div>
+    <div>
+      <img src="Images/SSIM_CHART.png" alt="SSIM chart" width ="400">
+      <div class="caption">
+        SSIM over training steps for the three models. Reflects improved perceptual 
+        similarity between the input and reconstruction.
+      </div>
+    </div>
+  </div>
+
+
+<h2>Ablation Study</h2>
+<div class="box">
+  <div class="ul_style">This includes evaluations of 3 model configurations.
+    <ul>
+      <li>CAE</li>
+      <li>CAE + Residual Blocks [CRB]</li>
+      <li>CAE + Residual Blocks + PatchGAN + Perceptual Loss [GCRB]</li>
+    </ul>
+</div>
+  <img class="palette_img" src="Images/Palette.svg" alt="Ablation reconstruction comparison">
+  <div class="caption">Ablation study presenting reconstruction results for three configurations: CAE, CRB, and GCRB.</div>
+  <p>
+    The CAE model produces blurry reconstructions with noticeable checkerboard artifacts, especially in areas with rich textures. The CRB configuration enhances edge sharpness, improves pixel-level accuracy, and reduces artifacting. However, it still falls short in capturing fine details and textures, such as eye color, whiskers, and variations in fur. The GCRB model demonstrates further improvements, offering better preservation of detail and a more realistic overall appearance.
+  </p>
+</div>
+</div>
+
+</body>
+</html>
