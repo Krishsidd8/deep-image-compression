@@ -1,5 +1,5 @@
 # Optimal Image Compression through Integration of Deep Learning Architectures
-### [Project Page](http://matthewtancik.com/nerf) | [Paper](StandardCitations_Optimal_Image_Compression_through_Integration_of_Deep_Learning_Architectures.pdf)
+### [Project Page](https://krishsidd8.github.io/deep-image-compression/) | [Paper](StandardCitations_Optimal_Image_Compression_through_Integration_of_Deep_Learning_Architectures.pdf)
 [[Open CAE in Colab]](https://colab.research.google.com/drive/1cGdR4h0VHmoqLsL20he8giuW51dkLBAD?usp=sharing) |
 [[Open CRB in Colab]](https://colab.research.google.com/drive/1pm47RUYwW_jZHydkPRAGeOcq106I3CKa?usp=sharing) |
 [[Open GCRB in Colab]](https://colab.research.google.com/drive/1xIDywdkdVjHGxKZz2Bu4X2hJptWCamyK?usp=sharing)
